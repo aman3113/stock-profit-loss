@@ -6,7 +6,6 @@
 
 header {
   padding: 40px;
-  font-size: 3rem;
   font-weight: 600;
   background: rgb(39, 8, 243);
   color: white;
@@ -26,13 +25,11 @@ input {
 }
 
 label {
-  font-size: 25px;
   font-weight: 500;
 }
 
 input {
   margin: 0 20px;
-  font-size: 15px;
 }
 
 .button {
@@ -49,4 +46,28 @@ button {
 #output {
   font-size: 20px;
   padding: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    font-size: 1.5rem;
+  }
+  input {
+    font-size: 15px;
+  }
+  label {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  header {
+    font-size: 3rem;
+  }
+  input {
+    font-size: 20px;
+  }
+  label {
+    font-size: 25px;
+  }
 }
