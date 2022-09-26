@@ -17,7 +17,7 @@ function clickHandler() {
 function pnlCalculator(initial, qty, current) {
   if (initial > current) {
     var loss = (initial - current) * qty;
-    var lossPercentage = (loss / initial) * 100;
+    var lossPercentage = (loss / (initial * qty)) * 100;
     outputDiv.innerText = `You have a loss of ${loss} Rs.
         
         Your loss percentage is ${lossPercentage}%`;
@@ -26,7 +26,7 @@ function pnlCalculator(initial, qty, current) {
     outputDiv.innerText = `You neither made a profit or loss`;
   } else {
     var profit = (current - initial) * qty;
-    var profitPercentage = (profit / initial) * 100;
+    var profitPercentage = (profit / (initial * qty)) * 100;
     outputDiv.innerText = `You have a profit of ${profit} Rs.
         
         Your profit percentage is ${profitPercentage}%`;
